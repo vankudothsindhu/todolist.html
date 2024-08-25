@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="controls">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <input type="date" id="dueDateInput">
+            <select id="priorityInput">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="text" id="categoryInput" placeholder="Enter a category">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div class="task-buttons">
+            <button onclick="filterTasks('add')">Add</button>
+            <button onclick="filterTasks('completed')">Edit</button>
+            <button onclick="filterTasks('pending')">Delete</button> 
+            </div><br>  
+        <div class="filter">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div><br>
+        <div>
+        <form id="todo-form">
+            <input type="text"id="todo-input" placeholder="Add a new task"required>
+            <button type="submit">Add</button>
+        </form>
+        <ul id="todo-list"></ul>
+        <ul id="taskList"></ul>
+        </div>
+    </div>
+    <script src="todolist.js"></script>
+    </body>
+    </html>
